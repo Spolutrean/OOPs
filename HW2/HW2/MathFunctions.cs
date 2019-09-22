@@ -1,4 +1,4 @@
-namespace HW1 {
+namespace HW2 {
     public static class MathFunctions {
         public static int gcd(int x, int y) {
             while (y != 0) {

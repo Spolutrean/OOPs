@@ -1,10 +1,9 @@
-﻿﻿using System;
- using System.Collections.Generic;
- using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 
- namespace HW1 {
-    class Program {
-        static void Main(string[] args) {
+namespace HW2 {
+    internal class Program {
+        public static void Main(string[] args) {
             RationalFraction a = new RationalFraction(2, 3);
             RationalFraction a2 = new RationalFraction(-2, -3);
             RationalFraction b = new RationalFraction(0, 3);
