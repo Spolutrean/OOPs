@@ -8,10 +8,9 @@ namespace HW2 {
     class RationalFraction : IComparable<RationalFraction> {
         private int numerator, denominator;
 
-        public RationalFraction(RationalFraction fraction) {
-            this.numerator = fraction.numerator;
-            this.denominator = fraction.denominator;
-            normalize();
+        public RationalFraction(RationalFraction fraction) 
+            : this(fraction.numerator, fraction.denominator){
+
         }
         public RationalFraction(string serialized) {
             if (serialized == "0") {
@@ -22,16 +21,14 @@ namespace HW2 {
                 this.numerator = Int32.Parse(serialized.Split('/')[0]);
                 this.denominator = Int32.Parse(serialized.Split('/')[1]);
             }
+            
         }
         public RationalFraction(int numerator, int denominator) {
             this.numerator = numerator;
             this.denominator = denominator;
             normalize();
         }
-        public RationalFraction(int natural) {
-            this.numerator = natural;
-            this.denominator = 1;
-            normalize();
+        public RationalFraction(int natural) : this(natural, 1) {
         }
 
         
@@ -90,7 +87,10 @@ namespace HW2 {
 
         public static RationalFraction operator *(RationalFraction r, int p) {
             r.numerator *= p;
-            r.denominator *= p;
+            if (p != 0) {
+                r.denominator *= p;
+            }
+
             return r;
         }
 

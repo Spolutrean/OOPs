@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace HW2 {
@@ -53,6 +54,7 @@ namespace HW2 {
 
             //2/3 * x^5 + 2/3 * x^4 + 3/5 * x^3 - 3/5 * x^2 + 0 * x^1 + 0
             Polynomial pa = new Polynomial(fa);
+            Console.WriteLine(pa.ToString());
             //0 * x^5 + 1/4 * x^4 + 1/5 * x^3 - 2/7 * x^2 - 5/7 * x^1 + 2/3
             Polynomial pb = new Polynomial(fb);
             //2/3 * x^5 + 11/12 * x^4 + 4/5 * x^3 - 31/35 * x^2 - 5/7 * x^1 + 2/3

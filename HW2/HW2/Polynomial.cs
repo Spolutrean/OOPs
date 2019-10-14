@@ -42,6 +42,8 @@ namespace HW2 {
                 RationalFraction e = e1.Current + e2.Current;
                 resultSequence.addElement(e);
             }
+            e1.Dispose();
+            e2.Dispose();
 
             return new Polynomial(resultSequence);
         }
