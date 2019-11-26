@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-11-25T05:36:15" hostname="spolutrean-Lenovo-ideapad-310-15ABR" time="2.8">
+  <properties/>
+  <testcase name="checkItemAdding" classname="ServiceTest" time="0.494"/>
+  <testcase name="checkFindCheaperShopByItems" classname="ServiceTest" time="0.557"/>
+  <testcase name="checkShopAdding" classname="ServiceTest" time="0.122"/>
+  <testcase name="findCheckFindBestShop" classname="ServiceTest" time="1.091"/>
+  <testcase name="checkTryBuyByMoney" classname="ServiceTest" time="0.533"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
