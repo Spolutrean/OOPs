@@ -3,11 +3,11 @@ package com.company.Task2;
 import com.company.Task2.Components.*;
 
 public interface Builder {
-    void reset();
-    void setMotherboard(MotherBoard motherboard);
-    void setProcessor(Processor processor);
-    void setDisk(Disk disk);
-    void setRAM(Ram ram);
-    void setVideoCard(VideoCard videoCard);
-    void setFluidCooler(FluidCooler fluidCooler);
+    Builder reset();
+    Builder setMotherboard(MotherBoard motherboard);
+    Builder setProcessor(Processor processor);
+    Builder setDisk(Disk disk);
+    Builder setRAM(Ram ram);
+    Builder setVideoCard(VideoCard videoCard);
+    Builder setFluidCooler(FluidCooler fluidCooler);
 }

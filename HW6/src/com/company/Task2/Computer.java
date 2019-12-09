@@ -34,7 +34,7 @@ public class Computer {
         return videoCard;
     }
 
-    public void setDisk(Disk disk) {    
+    public void setDisk(Disk disk) {
         this.disk = disk;
     }
 

@@ -6,41 +6,52 @@ public class ComputerBuilder implements Builder {
     private Computer computer = new Computer();
 
     @Override
-    public void reset() {
+    public Builder reset() {
         computer = new Computer();
+        return this;
     }
 
     @Override
-    public void setMotherboard(MotherBoard motherboard) {
+    public Builder setMotherboard(MotherBoard motherboard) {
         computer.setMotherBoard(motherboard);
+        return this;
     }
 
     @Override
-    public void setProcessor(Processor processor) {
+    public Builder setProcessor(Processor processor) {
         computer.setProcessor(processor);
+        return this;
     }
 
     @Override
-    public void setDisk(Disk disk) {
+    public Builder setDisk(Disk disk) {
         computer.setDisk(disk);
+        return this;
     }
 
     @Override
-    public void setRAM(Ram ram) {
+    public Builder setRAM(Ram ram) {
         computer.setRam(ram);
+        return this;
     }
 
     @Override
-    public void setVideoCard(VideoCard videoCard) {
+    public Builder setVideoCard(VideoCard videoCard) {
         computer.setVideoCard(videoCard);
+        return this;
     }
 
     @Override
-    public void setFluidCooler(FluidCooler fluidCooler) {
+    public Builder setFluidCooler(FluidCooler fluidCooler) {
         computer.setFluidCooler(fluidCooler);
+        return this;
     }
 
     public Computer getResult() {
-        return computer;
+        if(computer.getDisk() != null && computer.getMotherBoard() != null && computer.getProcessor() != null && computer.getRam() != null) {
+            return computer;
+        } else {
+            return null;
+        }
     }
 }
