@@ -23,7 +23,7 @@ public class DepositBill extends Bill {
 
     @Override
     public void withdraw(double amount) throws BillException {
-        if (amount > bank.unverifiedAccountMaxWithdraw) {
+        if (!user.isVerified() && amount > bank.unverifiedAccountMaxWithdraw) {
             throw new BillException("You have to verified account before withdraw more than " + bank.unverifiedAccountMaxWithdraw);
         }
         if (LocalDate.now().isBefore(endDate)) {
@@ -35,7 +35,7 @@ public class DepositBill extends Bill {
 
     @Override
     public void transfer(double amount, Bill toBill) throws BillException {
-        if (amount > bank.unverifiedAccountMaxTransaction) {
+        if (!user.isVerified() && amount > bank.unverifiedAccountMaxTransaction) {
             throw new BillException("You have to verified account before transfer more than " + bank.unverifiedAccountMaxTransaction);
         }
         if (LocalDate.now().isBefore(endDate)) {

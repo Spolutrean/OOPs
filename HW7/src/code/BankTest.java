@@ -155,7 +155,7 @@ public class BankTest {
         Assert.assertEquals(0d, user.bills.get(0).getMoneyAmount(), 1e-5);
     }
 
-    @Test(expected = BillException.class)
+    @Test
     public void checkIrrevocableTransactionUndo() throws BillException {
         User user = createVerifiedUser();
         Bank bank = createBank();

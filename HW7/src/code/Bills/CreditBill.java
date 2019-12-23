@@ -30,11 +30,14 @@ public class CreditBill extends Bill {
         if (!user.isVerified() && amount > bank.unverifiedAccountMaxTransaction) {
             throw new BillException("You have to verified account before transfer more than " + bank.unverifiedAccountMaxTransaction);
         }
-        if (moneyAmount - amount < -bank.minusLimit) {
+        if (moneyAmount - amount - (moneyAmount < 0 ? bank.minusCommission : 0) < -bank.minusLimit) {
             throw new BillException("You can not transfer over you credit.");
         }
 
-        moneyAmount -= amount + bank.minusCommission;
+        if(moneyAmount < 0) {
+            moneyAmount -= bank.minusCommission;
+        }
+        moneyAmount -= amount;
         toBill.moneyAmount += amount;
     }
 
